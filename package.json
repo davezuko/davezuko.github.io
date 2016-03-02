@@ -1,0 +1,27 @@
+{
+  "name": "davezuko.github.io",
+  "version": "0.1.0",
+  "description": "my website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "temp:render": "jade \"./src/index.jade\" --obj \"src/config.json\" --out \"./temp\"",
+    "temp:minify": "html-minifier ./temp/index.html --minify-css --minify-js --output temp/index.html",
+    "build": "npm run temp:render && npm run temp:minify",
+    "deploy": "npm run build && git checkout master && mv temp/index.html index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davezuko/davezuko.github.io.git"
+  },
+  "author": "David Zukowski <david@zuko.me> (https://zuko.me)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davezuko/davezuko.github.io/issues"
+  },
+  "homepage": "https://github.com/davezuko/davezuko.github.io#readme",
+  "devDependencies": {
+    "html-minifier": "^1.2.0",
+    "jade": "^1.11.0"
+  }
+}
