@@ -1,4 +1,4 @@
 *.log
-temp
+dist
 node_modules
 index.html
