@@ -169,7 +169,7 @@ main {
 .reverse-markdown ul {
   list-style: none; }
   .reverse-markdown ul > li::before {
-    content: '*';
+    content: '* ';
     position: relative;
     top: 0.15em; }
 
