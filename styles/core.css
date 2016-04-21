@@ -3,7 +3,7 @@
   font-family: 'Judson';
   font-style: normal;
   font-weight: 400;
-  src: local("Judson Regular"), local("Judson-Regular"), url(http://fonts.gstatic.com/s/judson/v9/mSN628yI6wHr19phC6fFMH-_kf6ByYO6CLYdB4HQE-Y.woff2) format("woff2");
+  src: local("Judson Regular"), local("Judson-Regular"), url(https://fonts.gstatic.com/s/judson/v9/mSN628yI6wHr19phC6fFMH-_kf6ByYO6CLYdB4HQE-Y.woff2) format("woff2");
   unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
 
 /* latin */
@@ -11,7 +11,7 @@
   font-family: 'Judson';
   font-style: normal;
   font-weight: 400;
-  src: local("Judson Regular"), local("Judson-Regular"), url(http://fonts.gstatic.com/s/judson/v9/FYGOicjn_NSylbjBq2XgEOvvDin1pK8aKteLpeZ5c0A.woff2) format("woff2");
+  src: local("Judson Regular"), local("Judson-Regular"), url(https://fonts.gstatic.com/s/judson/v9/FYGOicjn_NSylbjBq2XgEOvvDin1pK8aKteLpeZ5c0A.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
 
 /* latin-ext */
@@ -19,7 +19,7 @@
   font-family: 'Judson';
   font-style: normal;
   font-weight: 700;
-  src: local("Judson Bold"), local("Judson-Bold"), url(http://fonts.gstatic.com/s/judson/v9/mjihZp5T2j31-doFl6IBTYX0hVgzZQUfRDuZrPvH3D8.woff2) format("woff2");
+  src: local("Judson Bold"), local("Judson-Bold"), url(https://fonts.gstatic.com/s/judson/v9/mjihZp5T2j31-doFl6IBTYX0hVgzZQUfRDuZrPvH3D8.woff2) format("woff2");
   unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
 
 /* latin */
@@ -27,7 +27,7 @@
   font-family: 'Judson';
   font-style: normal;
   font-weight: 700;
-  src: local("Judson Bold"), local("Judson-Bold"), url(http://fonts.gstatic.com/s/judson/v9/NDPzIEaQdOK7zQKVTnPkIZBw1xU1rKptJj_0jans920.woff2) format("woff2");
+  src: local("Judson Bold"), local("Judson-Bold"), url(https://fonts.gstatic.com/s/judson/v9/NDPzIEaQdOK7zQKVTnPkIZBw1xU1rKptJj_0jans920.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
 
 /* latin-ext */
@@ -35,7 +35,7 @@
   font-family: 'Judson';
   font-style: italic;
   font-weight: 400;
-  src: local("Judson Italic"), local("Judson-Italic"), url(http://fonts.gstatic.com/s/judson/v9/jIqpPRO6xvAOjDK06yiS5hkAz4rYn47Zy2rvigWQf6w.woff2) format("woff2");
+  src: local("Judson Italic"), local("Judson-Italic"), url(https://fonts.gstatic.com/s/judson/v9/jIqpPRO6xvAOjDK06yiS5hkAz4rYn47Zy2rvigWQf6w.woff2) format("woff2");
   unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
 
 /* latin */
@@ -43,7 +43,7 @@
   font-family: 'Judson';
   font-style: italic;
   font-weight: 400;
-  src: local("Judson Italic"), local("Judson-Italic"), url(http://fonts.gstatic.com/s/judson/v9/FXgeXiXHxY0soRDyVlwBp3YhjbSpvc47ee6xR_80Hnw.woff2) format("woff2");
+  src: local("Judson Italic"), local("Judson-Italic"), url(https://fonts.gstatic.com/s/judson/v9/FXgeXiXHxY0soRDyVlwBp3YhjbSpvc47ee6xR_80Hnw.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
 
 /* latin */
@@ -51,7 +51,7 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
-  src: local("Montserrat-Regular"), url(http://fonts.gstatic.com/s/montserrat/v6/zhcz-_WihjSQC0oHJ9TCYAzyDMXhdD8sAj6OAJTFsBI.woff2) format("woff2");
+  src: local("Montserrat-Regular"), url(https://fonts.gstatic.com/s/montserrat/v6/zhcz-_WihjSQC0oHJ9TCYAzyDMXhdD8sAj6OAJTFsBI.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
 
 /* latin */
@@ -59,7 +59,7 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
-  src: local("Montserrat-Bold"), url(http://fonts.gstatic.com/s/montserrat/v6/IQHow_FEYlDC4Gzy_m8fcmaVI6zN22yiurzcBKxPjFE.woff2) format("woff2");
+  src: local("Montserrat-Bold"), url(https://fonts.gstatic.com/s/montserrat/v6/IQHow_FEYlDC4Gzy_m8fcmaVI6zN22yiurzcBKxPjFE.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
 
 html {
