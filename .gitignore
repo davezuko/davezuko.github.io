@@ -1,4 +1,6 @@
+.DS_STORE
 *.log
 dist
 node_modules
 index.html
+typings

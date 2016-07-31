@@ -4,11 +4,10 @@
   "description": "my website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "temp:render": "jade \"./src/index.jade\" --obj \"src/config.json\" --out \"./temp\"",
-    "temp:minify": "html-minifier ./temp/index.html --minify-css --minify-js --output temp/index.html",
-    "build": "npm run temp:render && npm run temp:minify",
-    "deploy": "npm run build && git checkout master && mv temp/index.html index.html"
+    "compile:app": "ts-node bin/compile",
+    "compile:static": "cp -r static/. dist",
+    "compile": "npm run compile:app && npm run compile:static",
+    "start": "ts-node bin/server"
   },
   "repository": {
     "type": "git",
@@ -21,7 +20,12 @@
   },
   "homepage": "https://github.com/davezuko/davezuko.github.io#readme",
   "devDependencies": {
-    "html-minifier": "^1.2.0",
-    "jade": "^1.11.0"
+    "html-webpack-plugin": "^2.22.0",
+    "react": "^15.3.0",
+    "react-dom": "^15.3.0",
+    "ts-loader": "^0.8.2",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-hot-middleware": "^2.12.2"
   }
 }
