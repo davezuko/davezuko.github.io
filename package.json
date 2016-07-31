@@ -6,7 +6,7 @@
   "scripts": {
     "compile:app": "ts-node bin/compile",
     "compile:static": "cp -r static/. dist",
-    "compile": "npm run compile:app && npm run compile:static",
+    "compile": "rm -rf dist && mkdir dist && npm run compile:app && npm run compile:static",
     "start": "ts-node bin/server"
   },
   "repository": {
@@ -20,12 +20,7 @@
   },
   "homepage": "https://github.com/davezuko/davezuko.github.io#readme",
   "devDependencies": {
-    "html-webpack-plugin": "^2.22.0",
     "react": "^15.3.0",
-    "react-dom": "^15.3.0",
-    "ts-loader": "^0.8.2",
-    "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.14.1",
-    "webpack-hot-middleware": "^2.12.2"
+    "react-dom": "^15.3.0"
   }
 }

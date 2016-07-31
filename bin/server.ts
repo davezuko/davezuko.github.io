@@ -1,3 +1,4 @@
-import server from '../server/main.tsx'
+import config from '../static.config.ts'
+import makeServer from '../../react-static/lib/dev-server.ts'
 
-server.listen(3000)
+const server = makeServer(config)
