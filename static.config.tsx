@@ -14,11 +14,14 @@ export default {
   // Rendering
   // ----------------------------------
   render: (req, res) => {
+    const rendered = renderToString(<App />)
     const html = `<!doctype html>` + renderToStaticMarkup(
       <HTML
         styles={req.assets.css}
         scripts={req.assets.js}
-      >{renderToString(<App />)}</HTML>
+      >
+        {rendered}
+      </HTML>
     )
     res(null, html)
   },
