@@ -8,7 +8,7 @@
     "removeComments": true,
     "preserveConstEnums": true,
     "sourceMap": false,
-    "target": "es6",
+    "target": "es5",
     "jsx": "react"
   }
 }

@@ -4,10 +4,11 @@
   "description": "my website",
   "main": "index.js",
   "scripts": {
-    "compile:app": "ts-node bin/compile",
+    "compile:app": "static:compile",
     "compile:static": "cp -r static/. dist",
     "compile": "rm -rf dist && mkdir dist && npm run compile:app && npm run compile:static",
-    "start": "ts-node bin/server"
+    "compile:prod": "NODE_ENV=production npm run compile",
+    "start": "static:dev"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,8 @@
   "devDependencies": {
     "react": "^15.3.0",
     "react-dom": "^15.3.0"
+  },
+  "dependencies": {
+    "static": "github:davezuko/static"
   }
 }

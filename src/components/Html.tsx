@@ -1,17 +1,26 @@
 import * as React from 'react'
 
-class Html extends React.Component<void, void> {
+interface HtmlProps {
+  children?: React.ReactNode,
+  scripts?: Array<string>,
+  styles?: Array<string>,
+}
+class Html extends React.Component<HtmlProps, void> {
   render () {
     return (
       <html>
         <head>
           <title>App</title>
+          <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+          {this.props.styles.map(style => (
+            <link key={style} rel='stylesheet' href={style} />
+          ))}
         </head>
         <body>
-          <div id='root'>
-            {this.props.children}
-          </div>
-          <script src='/scripts/app.js'></script>
+          <div id='root' dangerouslySetInnerHTML={{ __html: this.props.children }} />
+          {this.props.scripts.map(script => (
+            <script key={script} src={script} />
+          ))}
         </body>
       </html>
     )
