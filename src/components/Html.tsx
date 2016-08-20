@@ -10,7 +10,7 @@ class Html extends React.Component<HtmlProps, void> {
     return (
       <html>
         <head>
-          <title>App</title>
+          <title>David Zukowski</title>
           <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
           {this.props.styles.map(style => (
             <link key={style} rel='stylesheet' href={style} />
