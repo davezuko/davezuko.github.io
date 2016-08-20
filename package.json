@@ -4,9 +4,10 @@
   "description": "my website",
   "main": "index.js",
   "scripts": {
+    "clean": "rm -rf dist",
     "compile:app": "static:compile",
-    "compile:static": "cp -r static/. dist",
-    "compile": "rm -rf dist && mkdir dist && npm run compile:app && npm run compile:static",
+    "compile:static": "cp -r src/static/. dist",
+    "compile": "npm run clean && mkdir dist && npm run compile:app && npm run compile:static",
     "compile:prod": "NODE_ENV=production npm run compile",
     "start": "static:dev"
   },
@@ -20,11 +21,9 @@
     "url": "https://github.com/davezuko/davezuko.github.io/issues"
   },
   "homepage": "https://github.com/davezuko/davezuko.github.io#readme",
-  "devDependencies": {
-    "react": "^15.3.0",
-    "react-dom": "^15.3.0"
-  },
   "dependencies": {
+    "react": "^15.3.0",
+    "react-dom": "^15.3.0",
     "static": "github:davezuko/static"
   }
 }

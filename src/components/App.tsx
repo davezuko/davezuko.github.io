@@ -20,6 +20,16 @@ class App extends React.Component<void, void> {
               Where Flux Went Wrong
             </a>
           </li>
+          <li>
+            <a href='/posts/new-to-js-avoid-angular.md'>
+              New to JavaScript? Avoid Angular
+            </a>
+          </li>
+          <li>
+            <a href='/posts/relay-and-graphql-introduction.md'>
+              Relay and GraphQL Introduction
+            </a>
+          </li>
         </ul>
         <h2>Projects</h2>
         <ul>
