@@ -11,6 +11,7 @@ class Html extends React.Component<HtmlProps, void> {
       <html>
         <head>
           <title>David Zukowski</title>
+          <meta name='viewport' content='width=device-width,initial-scale=1' />
           <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
           {this.props.styles.map(style => (
             <link key={style} rel='stylesheet' href={style} />
