@@ -6,7 +6,7 @@ class App extends React.Component<void, void> {
       <main>
         <h1>David Zukowski</h1>
         <h2>About</h2>
-        <p>Hey there, I'm a front-end developer currently obsessed with all things JavaScript, especially its functional implementations. I work professionally on large scale ReactJS applications, and in my free time enjoy playing around with Clojure and ClojureScript. Outside of work, I spend much of my time reading and traveling.</p>
+        <p>Hey there, I'm a front-end developer currently obsessed with functional programming. I work professionally on large scale ReactJS applications, and in my free time enjoy contributing to the open source community and playing around with Clojure and Elm. Outside of work, I spend much of my time reading, playing tennis, and traveling.</p>
         <p>In the past I have worked on enterprise AngularJS applications, and before that developed websites for clients including Hilton Worldwide, Kimberly Clark, and Smucker's Natural Foods.</p>
         <h2>Writing</h2>
         <ul>
