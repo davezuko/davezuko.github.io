@@ -19,8 +19,8 @@ function App () {
     r('main', null,
       r('h1', null, 'David Zukowski'),
       r('h2', null, 'About'),
-      r('p', null, `Hey there, I'm a front-end developer currently obsessed with functional programming. I work professionally on large scale ReactJS applications, and in my free time enjoy contributing to the open source community and playing around with Clojure and Elm. Outside of work, I spend much of my time reading, playing tennis, and traveling.`),
-      r('p', null, `In the past I have worked on enterprise AngularJS applications, and before that developed websites for clients including Hilton Worldwide, Kimberly Clark, and Smucker's Natural Foods.`),
+      r('p', null, "Hey there, I'm a front-end developer currently obsessed with functional programming. I work professionally on large scale ReactJS applications, and in my free time enjoy contributing to the open source community and playing around with Clojure and Elm. Outside of work, I spend much of my time reading, playing tennis, and traveling."),
+      r('p', null, "In the past I have worked on enterprise AngularJS applications, and before that developed websites for clients including Hilton Worldwide, Kimberly Clark, and Smucker's Natural Foods."),
       r('h2', null, 'Writing'),
       r('ul', null, posts.map(Post))))}
 
