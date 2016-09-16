@@ -1,3 +1,4 @@
+require('fp-standard/installer')(global)
 const r = require('./src/lib/react')
 const path = require('path')
 const HTML = require('./src/components/html')
@@ -14,11 +15,11 @@ module.exports = {
   // Rendering
   // ----------------------------------
   render: (req, res) => {
-    const styles = req.assets.css ? req.assets.css.map(href => ({ href })) : []
-    const scripts = req.assets.js ? req.assets.js.map(src => ({ src })) : []
-    const rendered = renderToString(r(App))
-    const html = `<!doctype html>` + renderToStaticMarkup(
-      r(HTML, { styles, scripts }, rendered))
+    const styles = map(href => ({ href }), req.compiler.assets.css)
+    const scripts = map(src => ({ src }), req.compiler.assets.js)
+    const app = renderToString(r(App))
+    const html = '<!doctype html>' +
+      renderToStaticMarkup(r(HTML, { styles, scripts }, app))
 
     res(null, html)
   },

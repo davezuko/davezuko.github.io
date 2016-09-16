@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/davezuko/davezuko.github.io#readme",
   "dependencies": {
+    "fp-standard": "^0.13.0-beta.7",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
     "static": "github:davezuko/static"
