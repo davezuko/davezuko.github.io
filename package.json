@@ -1,0 +1,30 @@
+{
+  "name": "davezuko.github.io",
+  "version": "0.1.0",
+  "description": "my website",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "compile:app": "static:compile",
+    "compile:static": "cp -r src/static/. dist",
+    "compile": "npm run clean && mkdir dist && npm run compile:app && npm run compile:static",
+    "compile:prod": "NODE_ENV=production npm run compile",
+    "start": "static:dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davezuko/davezuko.github.io.git"
+  },
+  "author": "David Zukowski <david@zuko.me> (https://zuko.me)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davezuko/davezuko.github.io/issues"
+  },
+  "homepage": "https://github.com/davezuko/davezuko.github.io#readme",
+  "dependencies": {
+    "react": "^15.3.0",
+    "redash": "^0.16.0",
+    "react-dom": "^15.3.0",
+    "genesis-core": "https://github.com/technologyadvice/genesis-core"
+  }
+}

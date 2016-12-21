@@ -1,5 +1,4 @@
 *.log
 .DS_STORE
-typings
 dist
 node_modules
