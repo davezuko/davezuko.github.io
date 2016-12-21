@@ -4,12 +4,9 @@
   "description": "my website",
   "main": "index.js",
   "scripts": {
-    "clean": "rm -rf dist",
-    "compile:app": "static:compile",
-    "compile:static": "cp -r src/static/. dist",
-    "compile": "npm run clean && mkdir dist && npm run compile:app && npm run compile:static",
+    "compile": "rm -rf dist && mkdir dist && node scripts/compile",
     "compile:prod": "NODE_ENV=production npm run compile",
-    "start": "static:dev"
+    "start": "node scripts/start-dev-server"
   },
   "repository": {
     "type": "git",
@@ -22,9 +19,9 @@
   },
   "homepage": "https://github.com/davezuko/davezuko.github.io#readme",
   "dependencies": {
+    "normalize.css": "^5.0.0",
     "react": "^15.3.0",
-    "redash": "^0.16.0",
     "react-dom": "^15.3.0",
-    "genesis-core": "https://github.com/technologyadvice/genesis-core"
+    "redash": "^0.16.0"
   }
 }

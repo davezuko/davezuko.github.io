@@ -2,9 +2,7 @@ var React    = require('react')
   , ReactDOM = require('react-dom')
 
 var _slice = [].slice
-function contains (c, a) { return a.indexOf(c) !== -1 }
 function withoutLast (xs) { return _slice.call(xs, 0, dec(length(xs))) }
-function trim (s) { return s.trim() }
 
 var hyperToReact = (function () {
   var splitTags = pipe(split('>'), map(trim))
@@ -44,7 +42,7 @@ var hyperToReact = (function () {
  * @returns {React.Element}
  */
 function r (type, props, c0, c1, c2, c3, c4) {
-  if (is('string', type) && contains('>', type)) {
+  if (isType('string', type) && contains('>', type)) {
     return hyperToReact(type, props, _slice.call(arguments, 2))
   }
 
