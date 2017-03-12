@@ -2,14 +2,14 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './styles/main.sass'
 
-// Mount Application
+// Mount App
 // ------------------------------------
 const MOUNT_NODE = document.createElement('div')
 MOUNT_NODE.id = 'root'
 document.body.appendChild(MOUNT_NODE)
 
 let render = () => {
-  const App = require('./components/Application').default
+  const App = require('./components/App').default
 
   ReactDOM.render(
     <App />,
@@ -28,7 +28,7 @@ if (__DEV__) {
       }
     }
 
-    module.hot.accept('./components/Application', () => {
+    module.hot.accept('./components/App', () => {
       setImmediate(() => {
         ReactDOM.unmountComponentAtNode(MOUNT_NODE)
         render()

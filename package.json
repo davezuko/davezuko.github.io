@@ -4,7 +4,7 @@
   "description": "my website",
   "main": "index.js",
   "scripts": {
-    "compile": "rm -rf dist && mkdir dist && node scripts/compile",
+    "compile": "rm -rf dist && mkdir dist && node scripts/compile && cp -r public/** dist",
     "compile:prod": "NODE_ENV=production npm run compile",
     "start": "node scripts/start-dev-server"
   },
