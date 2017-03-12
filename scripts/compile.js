@@ -1,2 +1,2 @@
-require('../../technologyadvice/genesis-core/genesis-core')
+require('genesis-core')
   .compile(require('../genesis.config'))
