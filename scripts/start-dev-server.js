@@ -1,3 +1,2 @@
-require('../../technologyadvice/genesis-core/genesis-core')
-  .createDevServer()
-  .start()
+require('genesis-core')
+  .dev(require('../genesis.config'))

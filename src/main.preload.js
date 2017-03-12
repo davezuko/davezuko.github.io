@@ -1,0 +1,1 @@
+require('halcyon/installer')(global)
