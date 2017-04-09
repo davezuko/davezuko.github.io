@@ -4,9 +4,7 @@ import './styles/main.sass'
 
 // Mount App
 // ------------------------------------
-const MOUNT_NODE = document.createElement('div')
-MOUNT_NODE.id = 'root'
-document.body.appendChild(MOUNT_NODE)
+const MOUNT_NODE = document.getElementById('root')
 
 let render = () => {
   const App = require('./components/App').default

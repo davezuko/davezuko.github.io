@@ -4,9 +4,12 @@
   "description": "my website",
   "main": "index.js",
   "scripts": {
-    "compile": "rm -rf dist && mkdir dist && node scripts/compile && cp -r public/** dist",
+    "clean": "rm -rf dist",
+    "compile": "node scripts/compile && cp -r public/** dist",
     "compile:prod": "NODE_ENV=production npm run compile",
-    "start": "node scripts/start-dev-server"
+    "build": "npm run clean && npm run compile",
+    "bake": "node --require ./scripts/register scripts/bake",
+    "start": "node --require ./scripts/register scripts/start-dev-server"
   },
   "repository": {
     "type": "git",
