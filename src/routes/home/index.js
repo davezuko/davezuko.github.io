@@ -6,7 +6,7 @@ const posts = [
   { title: 'Where Flux Went Wrong', href: 'http://technologyadvice.github.io/where-flux-went-wrong' }]
 
 const projects = [
-  { title: 'halcyon: Lightweight Functional Programming for JavaScript', source: 'https://github.com/davezuko/halcyon', href: 'https://halcyon.zuko.me' },
+  { title: 'redash: Lightweight Functional Programming for JavaScript', source: 'https://github.com/davezuko/redash', href: 'https://redash.zuko.me' },
   { title: 'react-reformed: A Simpler Approach to Forms in React', source: 'https://github.com/davezuko/react-reformed', href: 'https://react-reformed.zuko.me' }]
 
 const HomeView = () =>
