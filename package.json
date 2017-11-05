@@ -5,11 +5,8 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf dist",
-    "compile": "node scripts/compile && cp -r public/** dist",
-    "compile:prod": "NODE_ENV=production npm run compile",
-    "build": "npm run clean && npm run compile",
-    "bake": "node --require ./scripts/register scripts/bake",
-    "start": "node --require ./scripts/register scripts/start-dev-server"
+    "build": "npm run clean && ./bin/bake.sh && cp -r public/** dist",
+    "start": "./bin/start.sh"
   },
   "repository": {
     "type": "git",
@@ -22,11 +19,12 @@
   },
   "homepage": "https://github.com/davezuko/davezuko.github.io#readme",
   "dependencies": {
-    "genesis-core": "technologyadvice/genesis-core",
-    "halcyon": "^0.19.1",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "node-sass": "^4.6.0",
     "normalize.css": "^5.0.0",
-    "react": "^15.3.0",
-    "react-dom": "^15.3.0",
-    "redash": "^0.16.0"
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "redash": "^0.23.0"
   }
 }
