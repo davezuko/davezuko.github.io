@@ -6,6 +6,7 @@ const routes = require('./routes')
 const app = express()
 
 app.use(require('morgan')('dev'))
+app.use(require('./middleware/live-reload')({ port: 4001 }))
 app.use(express.static(path.resolve(__dirname, '../public')))
 
 app.use(async (req, res, next) => {

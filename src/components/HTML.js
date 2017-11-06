@@ -14,9 +14,12 @@ const Head = ({ styles }) =>
       body ? r('style', { key: i, dangerouslySetInnerHTML: { __html: body } })
            : r('link', { key: i, rel: 'stylesheet', href }), styles))
 
-const HTML = ({ children, styles }) =>
+const HTML = ({ children, styles = [], scripts = [] }) =>
   r('html', null,
     r(Head, { styles }),
-    r('body', { dangerouslySetInnerHTML: { __html: children } }))
+    r('body', null,
+      r('div', { dangerouslySetInnerHTML: { __html: children } }),
+      mapi(({ src }) =>
+        r('script', { key: src, src }), scripts)))
 
 module.exports = HTML
