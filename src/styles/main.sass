@@ -1,24 +1,37 @@
 @import '../../node_modules/normalize.css/normalize'
+@import './syntax'
 
 *,
 *::before,
 *::after
   box-sizing: border-box
 
+html
+  font-size: 62.5%
+
 html,
 body
   margin: 0
   padding: 0
-  font-family: 'Open Sans', sans-serif
-  font-size: 1.1rem
+
+body
+  color: #3A4145
+  font-family: 'Merriweather', serif
+  font-size: 1.8rem
+  line-height: 1.75em
 
 main
   max-width: 1000px
   margin: 0 auto
   padding: 0 1.75rem
 
-p
+.home p
   text-align: justify
 
   @media screen and (max-width: 768px)
     text-align: left
+
+.post
+  width: 80%
+  max-width: 710px
+  margin: 0 auto

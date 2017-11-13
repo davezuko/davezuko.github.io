@@ -1,11 +1,7 @@
 ---
-id: 2
 title: New to JS? Avoid Angular
 published: 09/18/2015
 ---
-
-New To JS? Avoid Angular
-========================
 
 No, AngularJS is not that bad, at least for certain projects, and no, this isn't a prop piece for another framework that relies on belittling others. What it is, however, is an article about why AngularJS is not JavaScript, and why this is harmful for new developers.
 

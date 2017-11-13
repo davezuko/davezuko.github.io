@@ -14,11 +14,11 @@ const compileSass = (file) => new Promise((resolve, reject) => {
   })
 })
 
-const createFileRenderer = (filepath) => async () => {
+const renderView = async (View) => {
   const HTML = require('../components/HTML')
-  const View = require(path.resolve(__dirname, '../routes', filepath))
   const styles = [
     { href: 'https://fonts.googleapis.com/css?family=Open+Sans' },
+    { href: 'https://fonts.googleapis.com/css?family=Merriweather:300,300italic' },
     { body: await compileSass(path.resolve(__dirname, '../styles/main.sass')) },
   ]
 
@@ -27,4 +27,9 @@ const createFileRenderer = (filepath) => async () => {
   return `<!doctype html>${html}`
 }
 
+const createFileRenderer = (filepath) => () => {
+  return renderView(require(path.resolve(__dirname, '../routes', filepath)))
+}
+
+exports.renderView = renderView
 exports.createFileRenderer = createFileRenderer

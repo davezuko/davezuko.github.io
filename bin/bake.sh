@@ -10,6 +10,7 @@ const inDist = (fpath = '') => path.resolve(__dirname, '../dist', fpath)
 
 if (!fs.existsSync(inDist())) {
   fs.mkdirSync(inDist())
+  fs.mkdirSync(inDist('blog'))
 }
 
 const bakeRoute = async ([uri, handler]) => {
