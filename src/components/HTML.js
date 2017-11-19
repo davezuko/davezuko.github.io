@@ -9,7 +9,7 @@ const META = new Map([
 const Head = ({ styles }) =>
   r('head', null,
     r('title', null, 'David Zukowski | Software Engineer'),
-    mapi(([name, content], i) => r('meta', { key: i, name, content })),
+    mapi(([name, content], i) => r('meta', { key: i, name, content }), META),
     mapi(({ href, body }, i) =>
       body ? r('style', { key: i, dangerouslySetInnerHTML: { __html: body } })
            : r('link', { key: i, rel: 'stylesheet', href }), styles))
