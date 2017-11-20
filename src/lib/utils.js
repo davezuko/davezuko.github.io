@@ -17,8 +17,7 @@ const compileSass = (file) => new Promise((resolve, reject) => {
 const renderView = async (View) => {
   const HTML = require('../components/HTML')
   const styles = [
-    { href: 'https://fonts.googleapis.com/css?family=Open+Sans' },
-    { href: 'https://fonts.googleapis.com/css?family=Merriweather:300,300italic' },
+    { href: 'https://fonts.googleapis.com/css?family=Open+Sans|Merriweather:300,300italic' },
     { body: await compileSass(path.resolve(__dirname, '../styles/main.sass')) },
   ]
 
