@@ -1,31 +1,20 @@
-# [zuko.me](https://zuko.me)
+# ZukoMe
 
-My minimalistic website. Built with React, but nobody would ever know.
+To start your Phoenix server:
 
-## Requirements
+  * Install dependencies with `mix deps.get`
+  * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
+  * Install Node.js dependencies with `cd assets && npm install`
+  * Start Phoenix endpoint with `mix phx.server`
 
-* [Yarn](https://yarnpkg.com/en/)
-* [Node ^8.0.0](nodejs.org)
+Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-## Development
+Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
 
-```sh
-# Clone the repo:
-git clone git@github.com:davezuko/zuko.me
+## Learn more
 
-# Enter the repo and install dependencies:
-cd zuko.me
-yarn
-
-# Start the development server:
-yarn start
-```
-
-## Deployment
-
-```sh
-# Render website statically to ./dist:
-yarn build
-
-# Deploy ./dist to server however you want.
-```
+  * Official website: http://www.phoenixframework.org/
+  * Guides: http://phoenixframework.org/docs/overview
+  * Docs: https://hexdocs.pm/phoenix
+  * Mailing list: http://groups.google.com/group/phoenix-talk
+  * Source: https://github.com/phoenixframework/phoenix

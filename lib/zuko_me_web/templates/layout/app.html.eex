@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>David Zukowski | Software Engineer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Homepage for David Zukowski">
+    <meta name="author" content="David Zukowski">
+    <meta name="google-site-verification" content="hvYlF72G6vlrz-XLjdsyLaEhqsmPDRYy2qR96KHmXhY">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Merriweather:300,300italic" />
+    <link rel="stylesheet" href="<%= static_path(@conn, "/css/main.css") %>">
+  </head>
+  <body>
+    <div class="container">
+      <main role="main">
+        <%= render @view_module, @view_template, assigns %>
+      </main>
+    </div>
+  </body>
+</html>
