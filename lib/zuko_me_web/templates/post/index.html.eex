@@ -1,0 +1,5 @@
+<h2>Listing Posts</h2>
+
+<%= for post <- @posts do %>
+  <p>Title: <%= post.title %></p>
+<% end %>
