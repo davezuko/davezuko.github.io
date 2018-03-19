@@ -1,10 +1,10 @@
 defmodule ZukoMeWeb.PageController do
   use ZukoMeWeb, :controller
 
-  alias ZukoMe.Posts
+  alias ZukoMe.Blog
 
   def index(conn, _params) do
-    posts = Posts.list_posts()
+    posts = Blog.list_posts()
     projects = [
       %{link: "https://redash.zuko.me", title: "redash: Lightweight Functional Programming for JavaScript"},
       %{link: "https://react-reformed.zuko.me", title: "react-reformed: A Simpler Approach to Forms in React"},

@@ -1,10 +1,11 @@
-defmodule ZukoMe.Posts.Post do
+defmodule ZukoMe.Blog.Post do
   use Ecto.Schema
   import Ecto.Changeset
-  alias ZukoMe.Posts.Post
+  alias ZukoMe.Blog.Post
 
   schema "posts" do
     field :title, :string
+    field :slug, :string
     field :content, :string
     field :created_at, :string
   end

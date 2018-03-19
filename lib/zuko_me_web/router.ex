@@ -17,6 +17,5 @@ defmodule ZukoMeWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
-    resources "/posts", PostController
   end
 end

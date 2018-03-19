@@ -1,12 +1,12 @@
-defmodule ZukoMe.Posts do
+defmodule ZukoMe.Blog do
   @moduledoc """
-  The Posts context.
+  The Blog context.
   """
 
   import Ecto.Query, warn: false
   alias ZukoMe.Repo
 
-  alias ZukoMe.Posts.Post
+  alias ZukoMe.Blog.Post
 
   @doc """
   Returns the list of posts.
