@@ -2,6 +2,7 @@
 title: "Where Flux Went Wrong"
 categories: development javascript reactjs flux redux
 description: Regain your sanity by pulling application state out of ReactJS components.
+published: 12/31/2015
 ---
 
  > Already comfortable with the history around ReactJS and Flux? Skip to [Flux and Component State](#flux-and-component-state) to jump right into the problem statement.

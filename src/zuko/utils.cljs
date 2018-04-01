@@ -23,12 +23,13 @@
       {:content (marked (.-body data))}
       (js->clj (.-attributes data) :keywordize-keys true))))
 
-(defn load-blog []
-  (->> (.readdirSync fs "./src/zuko/blog")
-        (map (fn [file-name]
-              (read-markdown-file (.resolve path "./src/zuko/blog" file-name))))))
+(defn load-dir [dir-path]
+  (->> (.readdirSync fs dir-path)
+      (map #(read-markdown-file (.resolve path dir-path %)))))
 
-(def data
-  {:blog (load-blog)
-   :projects [{:title "redash" :description "Lightweight Functional Programming for JavaScript" :href "https://redash.zuko.me"}
-              {:title "react-reformed" :description "A Simpler Approach to Forms in React" :href "https://react-reformed.zuko.me"}]})
+(defn load-data []
+  (->> (.readdirSync fs "data")
+       (map #(-> {(keyword %) (load-dir (.resolve path "data" %))}))
+       (reduce merge {})))
+
+(def data (load-data))

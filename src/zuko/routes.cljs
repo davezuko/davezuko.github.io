@@ -7,5 +7,5 @@
 
 (def routes
   (flatten
-    [{:uri "/" :content home}]))
-     ; blog-routes]))
+    [{:uri "/" :content home}
+     blog-routes]))

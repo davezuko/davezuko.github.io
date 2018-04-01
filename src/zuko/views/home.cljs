@@ -12,9 +12,9 @@
     [:div
       [:h1 "David Zukowski"]
       [:section (utils/paragraphs description)]
-      [:section
+      [:section]
       [:h2 "Writing"]
-      [:ul (mapv #(-> [:li (:title %)]) (:blog utils/data))]]
-      [:section
+      [:ul (mapv #(-> [:li (:title %)]) (:blog utils/data))]
+      [:section]
       [:h2 "Projects"]
-      [:ul (mapv #(-> [:li (:title %)]) (:projects utils/data))]]]))
+      [:ul (mapv #(-> [:li (:title %)]) (:projects utils/data))]]))

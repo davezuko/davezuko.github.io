@@ -2,6 +2,7 @@
 title: "Eradicate Runtime Errors in React with Flow"
 description: Catch errors before they happen by statically analyzing your code with Flow.
 categories: reactjs flow javascript development
+published: 02/28/2016
 ---
 
 [Flow](http://flowtype.org/) is pretty awesome.
