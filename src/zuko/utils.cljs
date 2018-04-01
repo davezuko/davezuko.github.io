@@ -3,11 +3,37 @@
             [path]
             [marked]
             [front-matter :as fm]
+            [clojure.pprint :as pp]
             [clojure.string :as str]))
 
-(defn html [tag attrs children]
-  ;; todo
-  tag)
+(defn parse-node [node]
+  (cond
+    (empty? node) "" ;; how can this be empty?
+    (string? node) node
+    :else (html node)))
+
+(defn parse-children [children]
+  (str/join "\n" (mapv parse-node children)))
+
+(defn attrs->html [attrs]
+  (->> (into [] attrs)
+       (map #(str (name (first %)) "=\"" (last %) "\""))
+       (str/join " ")))
+
+(defn cljs->html [tag attrs children]
+  (let [opening-tag (str/trim (str "<" (name tag) " " (attrs->html attrs)))]
+    (if (empty? children)
+      (str opening-tag "/>")
+      (str opening-tag ">" (parse-children children) "</" (name tag) ">"))))
+
+(defn html [[tag & remaining :as node]]
+  ; (println "\n-----------")
+  ; (println "try compile")
+  ; (println (pp/pprint node))
+  ; (println "-----------\n")
+  (if (map? (first remaining))
+    (cljs->html tag (first remaining) (vec (rest remaining)))
+    (cljs->html tag {} (vec remaining))))
 
 (defn paragraphs [content]
   (->> (str/split content "\n")
