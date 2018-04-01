@@ -1,11 +1,24 @@
 (ns zuko.routes
-  (:require [zuko.views.home :as home]
-            [zuko.utils :as utils]))
+  (:require [zuko.utils :as utils]
+            [zuko.views.home :as home]
+            [zuko.layouts.default :as layout]
+            [clojure.pprint :as pp]
+            [clojure.string :as str]))
 
-; (def blog-routes
-;   (map #(-> {:uri "/blog" :title %}) (:blog utils/data)))
+(defn str->uri [s]
+  (-> s
+      (str/lower-case)
+      (str/replace #"\s+" "-")
+      (str/replace #"[+?]" "")
+      (str/replace #"-+" "-")))
+
+(def blog-routes
+  (->> (:blog utils/data)
+       (map (fn [{:keys [title content]}]
+              {:uri (str "/blog/" (str->uri title))
+               :render #(layouts/blog)}))))
 
 (def routes
   (flatten
-    [{:uri "/" :content home}
+    [{:uri "/" :render home/home}
      blog-routes]))

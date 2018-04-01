@@ -28,10 +28,12 @@
     empty? ""
     string? node
     vector? (let [tag (first node)
-                  remaining (vec (rest node))]
-              (if (map? (first remaining))
-                (clj->html tag (first remaining) (vec (rest remaining)))
-                (clj->html tag {} remaining)))))
+                  remaining (rest node)]
+              (if (vector? tag) ;; TODO(zuko): hacky, improve this
+                (parse-children node)
+                (if (map? (first remaining))
+                  (clj->html tag (first remaining) (vec (rest remaining)))
+                  (clj->html tag {} (vec remaining)))))))
 
 ;; Component Helpers
 ;; ------------------------------------
@@ -39,7 +41,7 @@
   (->> (str/split content "\n")
        (map str/trim)
        (filter not-empty)
-       (map #(-> [:p %]))))
+       (mapv #(-> [:p %]))))
 
 ;; Data Loaders
 ;; ------------------------------------

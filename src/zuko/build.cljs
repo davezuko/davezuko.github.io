@@ -9,8 +9,8 @@
   (exec "rm -rf dist")
   (exec "mkdir dist"))
 
-(defn make [])
-  ; (println (pp/pprint ((:content (first routes))))))
+(defn make []
+  (println (pp/pprint routes)))
 
 (defn -main []
   ; (clean)
