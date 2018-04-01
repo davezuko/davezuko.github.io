@@ -1,4 +1,4 @@
-(ns zuko.layouts
+(ns zuko.layouts.default
   (:require [zuko.utils :refer [html]]))
 
 (defn default [content]
