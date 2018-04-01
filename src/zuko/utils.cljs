@@ -6,35 +6,35 @@
             [clojure.pprint :as pp]
             [clojure.string :as str]))
 
-(defn parse-node [node]
-  (cond
-    (empty? node) "" ;; how can this be empty?
-    (string? node) node
-    :else (html node)))
-
+;; HTML Compiler
+;; ------------------------------------
 (defn parse-children [children]
-  (str/join "\n" (mapv parse-node children)))
+  (str/join "\n" (mapv html children)))
 
 (defn attrs->html [attrs]
   (->> (into [] attrs)
        (map #(str (name (first %)) "=\"" (last %) "\""))
        (str/join " ")))
 
-(defn cljs->html [tag attrs children]
-  (let [opening-tag (str/trim (str "<" (name tag) " " (attrs->html attrs)))]
+(defn clj->html [tag attrs children]
+  (let [html-tag (name tag)
+        opening-tag (str/trim (str "<" html-tag " " (attrs->html attrs)))]
     (if (empty? children)
       (str opening-tag "/>")
-      (str opening-tag ">" (parse-children children) "</" (name tag) ">"))))
+      (str opening-tag ">" (parse-children children) "</" html-tag ">"))))
 
-(defn html [[tag & remaining :as node]]
-  ; (println "\n-----------")
-  ; (println "try compile")
-  ; (println (pp/pprint node))
-  ; (println "-----------\n")
-  (if (map? (first remaining))
-    (cljs->html tag (first remaining) (vec (rest remaining)))
-    (cljs->html tag {} (vec remaining))))
+(defn html [node]
+  (condp #(%1 %2) node
+    empty? ""
+    string? node
+    vector? (let [tag (first node)
+                  remaining (vec (rest node))]
+              (if (map? (first remaining))
+                (clj->html tag (first remaining) (vec (rest remaining)))
+                (clj->html tag {} remaining)))))
 
+;; Component Helpers
+;; ------------------------------------
 (defn paragraphs [content]
   (->> (str/split content "\n")
        (map str/trim)

@@ -10,12 +10,12 @@
   (layouts/default
     [:div
       [:h1 "David Zukowski"]
-      [:section (utils/paragraphs description)]
+      ; [:section (utils/paragraphs description)]
       [:section]
       [:h2 "Writing"]
-      [:ul (mapv #(-> [:li (:title %)]) (:blog utils/data))]
+      ; [:ul (mapv #(-> [:li (:title %)]) (:blog utils/data))]
       [:section]
-      [:h2 "Projects"]
-      [:ul (mapv #(-> [:li (:title %)]) (:projects utils/data))]]))
+      [:h2 "Projects"]]))
+      ; [:ul (mapv #(-> [:li (:title %)]) (:projects utils/data))]]))
 
-(println (layouts/default))
+(println (home))
