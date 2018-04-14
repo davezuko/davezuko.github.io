@@ -1,7 +1,7 @@
 (ns zuko.layouts.default
   (:require [zuko.utils :refer [html]]))
 
-(defn default [content]
+(defn render [content]
   (html
     [:html {:class "no-js"}
       [:head

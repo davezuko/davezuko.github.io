@@ -1,7 +1,7 @@
 (ns zuko.routes
   (:require [zuko.utils :as utils]
             [zuko.views.home :as home]
-            [zuko.layouts.default :as layout]
+            [zuko.layouts.blog :as blog]
             [clojure.pprint :as pp]
             [clojure.string :as str]))
 
@@ -16,7 +16,7 @@
   (->> (:blog utils/data)
        (map (fn [{:keys [title content]}]
               {:uri (str "/blog/" (str->uri title))
-               :render #(layouts/blog)}))))
+               :render #(blog/render content)}))))
 
 (def routes
   (flatten
