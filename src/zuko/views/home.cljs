@@ -34,7 +34,7 @@
       [:section (utils/paragraphs description)]
       [:section]
       [:h2 "Writing"]
-      [:ul (mapv render-blog-link (:blog utils/data))]
-      [:section]
-      [:h2 "Projects"]
-      [:ul (mapv render-project-link (:projects utils/data))]]))
+      [:ul (mapv render-blog-link (:blog utils/data))]]))
+      ; [:section]
+      ; [:h2 "Projects"]
+      ; [:ul (mapv render-project-link (:projects utils/data))]]))
