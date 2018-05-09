@@ -16,7 +16,7 @@
   (->> (:blog utils/data)
        (map (fn [{:keys [title content]}]
               {:uri (str "/blog/" (str->uri title))
-               :render #(blog/render content)}))))
+               :render #(blog/render title content)}))))
 
 (def routes
   (flatten

@@ -1,5 +1,5 @@
 ---
-title: Relay + GraphQL
+title: From Redux to GraphQL
 published: 10/15/2015
 ---
 

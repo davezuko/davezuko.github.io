@@ -1,6 +1,7 @@
 (ns zuko.layouts.blog
-  (:require [zuko.layouts.default :as default]
+  (:require [zuko.layouts.main :as default]
             [zuko.utils :refer [html]]))
 
-(defn render [content]
-  (default/render content))
+(defn render [title content]
+  (default/render
+    [[:h1 title] content]))

@@ -6,15 +6,16 @@
   "author": "David Zukowski <david@zuko.me>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon --exec \"npm run make\" --quiet --ext cljs --watch src",
+    "start": "nodemon --exec \"yarn make\" --quiet --ext cljs --watch src",
     "make": "lumo -c src -m zuko.build"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "front-matter": "^2.3.0",
+    "lumo-cljs": "^1.8.0",
+    "marked": "^0.3.19"
   },
   "devDependencies": {
     "nodemon": "^1.17.3"
-  },
-  "dependencies": {
-    "front-matter": "^2.3.0",
-    "lumo": "^0.20.11",
-    "marked": "^0.3.19"
   }
 }
