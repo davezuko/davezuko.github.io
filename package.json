@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon --exec \"yarn make\" --quiet --ext cljs --watch src",
-    "make": "lumo -c src -m zuko.build"
+    "make": "lumo -c src -m zuko.build && cp -r public/* dist"
   },
   "dependencies": {
     "chalk": "^2.4.1",
