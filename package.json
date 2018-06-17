@@ -6,14 +6,35 @@
   "author": "David Zukowski <david@zuko.me>",
   "license": "MIT",
   "scripts": {
+    "make:css": "postcss css/main.css -o dist/css/main.css",
     "serve": "cd dist && python -m SimpleHTTPServer",
-    "start": "nodemon --exec \"yarn make\" --ext js,md,pug --ignore dist & yarn serve",
-    "make": "node ./build/make"
+    "start": "nodemon --exec \"yarn make\" --ext css,js,md,pug --ignore dist & yarn serve",
+    "make": "node ./build/make && yarn make:css"
   },
+  "postcss": {
+    "plugins": {
+      "postcss-import": {},
+      "postcss-cssnext": {},
+      "cssnano": {
+        "autoprefixer": false
+      }
+    }
+  },
+  "browserslist": [
+    "last 2 versions",
+    "IE 10",
+    "IE 11"
+  ],
   "dependencies": {
+    "cssnano": "^3.10.0",
     "front-matter": "^2.3.0",
     "fs-extra": "^6.0.1",
     "marked": "^0.4.0",
+    "normalize.css": "^8.0.0",
+    "postcss": "^6.0.22",
+    "postcss-cli": "^5.0.0",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-import": "^11.1.0",
     "pug": "^2.0.3"
   },
   "devDependencies": {
