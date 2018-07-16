@@ -35,3 +35,14 @@ main {
 p {
   text-indent: 3rem;
 }
+
+@media screen and (max-width: 768px) {
+  main {
+    margin: 2rem 0;
+    padding: 0 3rem;
+  }
+
+  p {
+    text-indent: 0;
+  }
+}
