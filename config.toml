@@ -2,3 +2,9 @@ baseURL = "/"
 languageCode = "en-us"
 title = "David Zukowski"
 theme = "tale"
+
+[params]
+  Author = "David Zukowski"
+
+[permalinks]
+  blog = "/blog/:year/:month/:title/"
