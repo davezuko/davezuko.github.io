@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Apartment Tracker</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+  </head>
+  <body>
+    <template id="unit">
+      <tr>
+        <td>{{ unit.apartmentSize }} sqft.</td>
+        <td>{{ unit.beds }} bed</td>
+        <td>{{ unit.baths }} bath</td>
+        <td>{{ unit.floor }}</td>
+        <td>${{ unit.pricing.effectiveRent }}</td>
+        <td>{{ unit.pricing.availableDate.toLocaleDateString() }}</td>
+      </tr>
+    </template>
+    <div class="container mt-5">
+      <h1>Apartment Hunter</h1>
+      <p>
+        <a href="https://www.avaloncommunities.com/washington/bellevue-apartments/avalon-meydenbauer/floor-plans">Link to Avalon Meydenbauer</a>
+      </p>
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Size</th>
+            <th>Beds</th>
+            <th>Baths</th>
+            <th>Floor</th>
+            <th>Price</th>
+            <th>Available</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+    <script>
+      function flatten(arr) {
+        return arr.reduce((acc, x) => {
+          return acc.concat(x)
+        }, [])
+      }
+
+      function displayUnits(units) {
+        const template = document.getElementById('unit')
+        const table = document.querySelector('tbody')
+        const sorted = units.sort((a, b) => b.pricing.availableDate - a.pricing.availableDate)
+
+        sorted
+          .forEach(unit => {
+            if (unit.beds === 0) return
+
+            const row = document.importNode(template.content, true)
+
+            // super unsafe, but this page is just for convenience anyways
+            for (const td of row.querySelectorAll('td')) {
+              const pattern = td.textContent.match(/{{ ([\w.()]+) }}/)
+              if (pattern) {
+                td.textContent = td.textContent.replace(pattern[0], eval(pattern[1]))
+              }
+            }
+            table.appendChild(row)
+        })
+      }
+
+      function processUnits(res) {
+        let floorplans = flatten(res.results.availableFloorPlanTypes.map(t => t.availableFloorPlans))
+        let units = flatten(floorplans.map(plan => flatten(plan.finishPackages.map(p => p.apartments))))
+        return units.map(unit => {
+          unit.pricing.availableDate = new Date(+unit.pricing.availableDate.replace(/\D/g, ''))
+          return unit
+        })
+      }
+
+      fetch('https://api.avalonbay.com/json/reply/ApartmentSearch?communityCode=WA018&min=1400&max=2700&_=1543261506907')
+        .then(res => res.json())
+        .then(processUnits)
+        .then(displayUnits)
+    </script>
+  </body>
+</html>
