@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title>Nashville Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__content">
+            <span class="header__lede">Everything you need to know to move to</span>
+            <h1>Nashville, TN</h1>
+            <div class="countdown-widget heading"></div>
+        </div>
+        <div class="weather-widgets">
+            <div class="weather-widget widget">
+                <span class="weather-widget__day heading"></span>
+                <img class="weather-widget__icon" />
+                <span class="weather-widget__temperature"></span>
+            </div>
+            <div class="weather-widget widget">
+                <span class="weather-widget__day heading"></span>
+                <img class="weather-widget__icon" />
+                <span class="weather-widget__temperature"></span>
+            </div>
+            <div class="weather-widget widget">
+                <span class="weather-widget__day heading"></span>
+                <img class="weather-widget__icon" />
+                <span class="weather-widget__temperature"></span>
+            </div>
+            <div class="weather-widget widget">
+                <span class="weather-widget__day heading"></span>
+                <img class="weather-widget__icon" />
+                <span class="weather-widget__temperature"></span>
+            </div>
+            <div class="weather-widget widget">
+                <span class="weather-widget__day heading"></span>
+                <img class="weather-widget__icon" />
+                <span class="weather-widget__temperature"></span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="gallery-widget">
+        </div>
+    </main>
+    <script type="module">
+        import {Countdown, Weather, Gallery} from "/js/main.js"
+
+        Countdown.init()
+        Gallery.init()
+        Weather.init({ appid: "{{ getenv "OPEN_WEATHER_API_KEY" }}" })
+    </script>
+</body>
+</html>
